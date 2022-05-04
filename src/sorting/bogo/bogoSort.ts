@@ -7,7 +7,6 @@ export default function bogoSort(list: number[]): number[] {
 
   while (!checkSort(tempList)) {
     tempList = shuffle(tempList);
-    console.log(tempList);
   }
 
   return tempList;
