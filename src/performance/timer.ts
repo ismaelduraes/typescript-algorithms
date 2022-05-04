@@ -1,9 +1,7 @@
-export default function timer(fn: () => void): number {
-  const date = new Date();
+export default function timer(func: () => any): string {
+  const initialTime = Date.now();
+  func();
+  const finalTime = Date.now();
 
-  const initialTime = date.getTime();
-  fn();
-  const finalTime = date.getTime();
-
-  return finalTime - initialTime;
+  return `${finalTime - initialTime}ms`;
 }

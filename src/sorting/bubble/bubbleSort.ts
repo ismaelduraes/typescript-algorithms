@@ -3,7 +3,7 @@ export default function bubbleSort(list: number[]): number[] {
   let isDone = false;
 
   do {
-    for (let a = 0; a <= list.length; a++) {
+    for (let a = 0; a < list.length; a++) {
       if (swaps == 0) isDone = true;
       else swaps = 0; //reset amount of swaps
       //
