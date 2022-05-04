@@ -1,5 +1,4 @@
 export default function bubbleSort(list: number[]): number[] {
-  let tempList = list;
   let swaps = 0;
   let isDone = false;
 
@@ -8,15 +7,15 @@ export default function bubbleSort(list: number[]): number[] {
       if (swaps == 0) isDone = true;
       else swaps = 0; //reset amount of swaps
       //
-      for (let b = a; b <= list.length; b++) {
+      for (let b = 0; b <= list.length; b++) {
         const head = b;
-        if (tempList[head] > tempList[head + 1]) {
-          const biggest = tempList[b];
-          const smallest = tempList[b + 1];
+        if (list[head] > list[head + 1]) {
+          const biggest = list[b];
+          const smallest = list[b + 1];
           //pull smallest 1 index back
-          tempList[head] = smallest;
+          list[head] = smallest;
           //push biggest 1 index forward (this will swap their places)
-          tempList[head + 1] = biggest;
+          list[head + 1] = biggest;
 
           swaps += 1;
         }
@@ -24,5 +23,5 @@ export default function bubbleSort(list: number[]): number[] {
     }
   } while (isDone === false);
 
-  return tempList;
+  return list;
 }
