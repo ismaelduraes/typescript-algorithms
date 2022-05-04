@@ -1,6 +1,6 @@
-import checkSort from "../util/checkSort/checkSort";
-import cloneList from "../util/cloneList/cloneList";
-import shuffle from "../util/shuffle/shuffle";
+import checkSort from "../util/list_utils/checkSort/checkSort";
+import cloneList from "../util/list_utils/cloneList/cloneList";
+import shuffle from "../util/list_utils/shuffle/shuffle";
 
 export default function bogoSort(list: number[]): number[] {
   let tempList = cloneList(list);
