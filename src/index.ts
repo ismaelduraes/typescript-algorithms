@@ -1,6 +1,5 @@
-import bubble from "./sorting/bubble";
+import bubbleSort from "./sorting/bubble/bubbleSort";
 
 const numbers = [5, 4, 3, 2, 1];
-
 console.log(numbers);
-console.log(bubble(numbers));
+console.log(bubbleSort(numbers));
